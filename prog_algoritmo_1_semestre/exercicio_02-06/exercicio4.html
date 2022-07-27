@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var nome = prompt("Digite um nome: ");
+        var qtde = Number(prompt("Digite a quantidade: "));
+        var valor = Number(prompt("Digite o valor: "));
+
+var total = qtde * valor;
+
+if(qtde > 10){
+    var desconto = total * (5/100);
+    var total_pagar = total - desconto;
+    alert("Nome: "+nome+". Valor a pagar: "+ total_pagar+". Desconto: 5% -> "+desconto);
+} else if(qtde <= 10 && qtde > 5){
+    var total_pagar = total - (total * (3/100));
+    alert("Nome: "+nome+". Valor a pagar: "+ total_pagar+". Desconto: 3% ");
+} else {
+    var total_pagar = total - (total * (2/100));
+    alert("Nome: "+nome+". Valor a pagar: "+ total_pagar+". Desconto: 2% ");
+}
+
+    </script>
+</body>
+</html>

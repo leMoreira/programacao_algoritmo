@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <h1>Problema</h1>
+ <p>Pedrinho foi jogar bola. Chegando na quadra, os amigos 
+     perguntaram qual posição ele queria jogar.</p>
+ <p>Se ele escolher : Goleiro -> Entre no time do Fulano</p>
+ <p>Se não, entre no time do Ciclano</p>
+ <hr align="center" width="50%" />
+ 
+ <select id="escolha">
+     <option value="goleiro">Goleiro</option>
+     <option value="outro">Outra posição</option>
+ </select>
+
+ <button type="button" id="btn">Selecionar</button>
+<script>
+   
+    var btn = document.getElementById('btn');
+
+btn.addEventListener('click', function(){
+
+    var escolha = document.getElementById('escolha').value;
+    
+    if (escolha == 'goleiro'){
+        alert('Vai para o Time do fulano');
+    } else  {
+        alert('Vai para o time do ciclano');
+    }
+});
+
+</script>
+
+
+
+ 
+</body>
+</html>

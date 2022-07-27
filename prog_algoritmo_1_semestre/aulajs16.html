@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3> Inserir três números e verificar qual o maior</h3>
+
+    <input type="text" id="n1" placeholder="Digite o primeiro valor" />
+    <input type="text" id="n2" placeholder="Digite o segundo valor" />
+    <input type="text" id="n3" placeholder="Digite o terceiro valor" />
+
+  <button id="verificar">Verificar</button>
+  
+  <script>
+    var verificar = document.getElementById("verificar");
+    verificar.addEventListener("click", function(){
+        var numero1 = document.getElementById("n1").value;
+        var numero2 = document.getElementById("n2").value;
+        var numero3 = document.getElementById("n3").value;
+
+        var num1 = Number(numero1);
+        var num2 = Number(numero2);
+        var num3 = Number(numero3);
+
+
+        if(num1 > num2 && num1 > num3){
+
+            alert("O número "+ num1 + " é maior");
+        
+        } else if (num2 > num3 && num2 > num1){
+
+            alert("O número " + num2 + " é maior");
+
+        } else if (num3 > num1 && num3 > num2){
+
+            alert("O número " + num3 + " é maior");
+        
+        } else {
+               
+            alert ("Os números são iguais"); 
+        }
+
+
+
+    });    
+
+  </script>
+
+
+</body>
+</html>

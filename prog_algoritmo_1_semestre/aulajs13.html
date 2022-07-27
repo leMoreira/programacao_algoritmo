@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Reconhecer número par ou ímpar</h2>
+
+ <p>Sinal de compração</p>
+ 
+<!--  
+        == -> igual
+        <= -> Menor ou igual
+        >= -> Maior ou igual
+        != -> Negação ( Não igual) 
+-->
+
+ 
+
+    <div id="resultado"></div>
+    
+<script>
+    var numero = Number(prompt("Digite um valor"));
+    var resultado = document.getElementById('resultado');
+
+ if (numero % 2 == 0){
+     resultado.innerHTML= "O Número é Par";
+ }  else {
+     resultado.innerHTML = "O número é ímpar";
+ }  
+
+</script>
+
+    
+</body>
+</html>

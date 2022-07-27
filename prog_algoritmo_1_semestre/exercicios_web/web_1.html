@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Faça um script que recebe o salário de um colaborador e o reajuste 
+        segundo o seguinte critério, baseado no salário atual:
+
+        salários até R$ 280,00 (incluindo) : aumento de 20%
+        salários entre R$ 280,00 e R$ 700,00 : aumento de 15%
+        salários entre R$ 700,00 e R$ 1500,00 : aumento de 10%
+        salários de R$ 1500,00 em diante : aumento de 5% 
+        Após o aumento ser realizado, informe na tela:
+        o salário antes do reajuste;
+        o percentual de aumento aplicado;
+        o valor do aumento;
+        o novo salário, após o aumento.</h2>
+<hr width="100%"/>
+<p> 
+    Salário do Colaborador : : 
+    <input type="text" id="salarioAtual" />
+    <input 
+        type="button" 
+        id="verificarSalario" 
+        value="Verificar Salário" /> 
+</p>
+<div id="salarioAntesDoReajuste"></div>
+<div id="percentualDoAumentoAplicado"></div>
+<div id="valorDoAumento"></div>
+<div id="novoSalario"></div>
+
+<script>
+    var verificarSalario = document.getElementById("verificarSalario");
+  verificarSalario.addEventListener("click", function(){
+
+var salarioAtual = Number(document.getElementById("salarioAtual").value);
+
+var salarioAntesDoReajuste = document.getElementById("salarioAntesDoReajuste");
+var percentualDoAumentoAplicado = document.getElementById("percentualDoAumentoAplicado");   
+var valorDoAumento = document.getElementById("valorDoAumento");
+var novoSalario = document.getElementById("novoSalario");
+
+if(salarioAtual <= 280){
+    var aumento = "20%";
+    var valorDoAumentoComPor = salarioAtual * (20/100); 
+    var totalNovoSalario = salarioAtual + valorDoAumentoComPor;
+
+salarioAntesDoReajuste.innerHTML = salarioAtual;
+percentualDoAumentoAplicado.innerHTML = aumento;
+valorDoAumento.innerHTML = valorDoAumentoComPor;
+novoSalario.innerHTML = totalNovoSalario;    
+
+} else if (salarioAtual > 280 && salarioAtual <= 700)
+    {
+    var aumento = "15%";
+    var valorDoAumentoComPor = salarioAtual * (15/100); 
+    var totalNovoSalario = salarioAtual + valorDoAumentoComPor;
+
+salarioAntesDoReajuste.innerHTML = salarioAtual;
+percentualDoAumentoAplicado.innerHTML = aumento;
+valorDoAumento.innerHTML = valorDoAumentoComPor;
+novoSalario.innerHTML = totalNovoSalario; 
+
+    } else if (salarioAtual > 700 && salarioAtual <= 1500)
+        {
+
+    var aumento = "10%";
+    var valorDoAumentoComPor = salarioAtual * (10/100); 
+    var totalNovoSalario = salarioAtual + valorDoAumentoComPor;
+
+salarioAntesDoReajuste.innerHTML = salarioAtual;
+percentualDoAumentoAplicado.innerHTML = aumento;
+valorDoAumento.innerHTML = valorDoAumentoComPor;
+novoSalario.innerHTML = totalNovoSalario;
+
+        } else {
+            var aumento = "5%";
+    var valorDoAumentoComPor = salarioAtual * (5/100); 
+    var totalNovoSalario = salarioAtual + valorDoAumentoComPor;
+
+salarioAntesDoReajuste.innerHTML = salarioAtual;
+percentualDoAumentoAplicado.innerHTML = aumento;
+valorDoAumento.innerHTML = valorDoAumentoComPor;
+novoSalario.innerHTML = totalNovoSalario;
+
+        }
+
+  }); 
+</script>
+
+</body>
+</html>

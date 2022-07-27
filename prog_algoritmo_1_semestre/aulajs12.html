@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto-escola Etec</title>
+</head>
+
+<body 
+style=
+"background-image: url(autoescola.jpg);
+background-size: cover;
+background-position-y:-10em;" >
+   
+   <h1 
+   style="  width: 100%;
+            padding:10px 0;
+            background-color: #fff;"
+             align="center" >Auto escola ETEC</h1> 
+
+<div id="resultado"
+        style="font-size:5rem;color:#fff"
+></div>
+
+
+             <script>
+  var nome = prompt("Qual seu nome");
+  var idade = Number(prompt("Qual a sua idade"));
+  
+  if(idade < 18){
+ alert(nome+", é menor de idade. Portanto, não pode ter habilitação");
+  } else {
+ alert(nome+", Você pode ter habilitação. De brinde ganhou uma toyota");     
+    document.getElementById('resultado').innerHTML = "Ebaaaaaaaaaa!";
+
+}
+  
+             </script>
+
+
+            </body>
+</html>

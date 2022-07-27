@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Atividade</h2>
+
+ <p>Faça um algoritmo que leia três notas de um aluno, 
+     calcule e escreva a média final deste aluno. 
+     Considerar que a média é ponderada e que o peso 
+     das notas é 2, 3 e 5. Fórmula para o cálculo da média
+
+     media = ((nota1 * 2) + (nota2 * 3) + (nota3 * 5)) / 10;
+ </p>
+
+ <script>
+        var nota1 = Number(prompt("Digite a primeira nota:"));
+        var nota2 = Number(prompt("Digite a segunda nota:"));
+        var nota3 = Number(prompt("Digite a terceira nota:"));
+
+        var resultado_peso_1 = nota1 * 2;
+        var resultado_peso_2 = nota2 * 3; 
+        var resultado_peso_3 = nota3 * 5; 
+
+        var soma = resultado_peso_1 + resultado_peso_2 + resultado_peso_3;
+
+        var media = soma / 10;
+
+        alert("O resultado da média é " + media);
+
+//var media = ((nota1 * 2)+(nota2 * 3)+(nota3 * 5))/10;
+ </script>
+
+</body>
+</html>
